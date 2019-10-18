@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main(){
+    int N=3;
+    scanf("%d",N);
+    int n=N*2;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(i<(n/2 - 1)){
+                if(j>i && j<(n-i-1))
+                    printf(" ");
+                else
+                    printf("X");
+            }
+            else if(i>=(n/2 +1)){
+                if(j>=(n-i) && j<i) {
+                    printf(" ");
+                }
+                else
+                {
+                    printf("X");
+                }
+            }
+            else
+            {
+                    printf("X");
+            }
+        }
+        printf("\n");
+    }
+}
