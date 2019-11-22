@@ -1,0 +1,402 @@
+#include <stdio.h>
+int main(){
+    Q1();
+    Q2();
+    Q3();
+    Q4();
+    Q5();
+    Q6();
+    Q7();
+    Q8();
+    Q9();
+    Q10();
+    Q11();
+    Q12();
+    Q13();
+    Q14();
+    Q15();
+    return 0;
+}
+
+void Q1() {
+    /*
+    1. Write a program to read an alphabet.
+    If it is in capital case
+    then convert it to lower case
+    and vice versa.
+    */
+    char c;
+    printf("\nENter an alphabet : ");
+    scanf("%c",&c);
+    if(isupper(c)){
+        c=tolower(c);
+    }
+    else{
+        c=toupper(c);
+    }
+    printf("\n%c",c);
+}
+
+void Q2(){
+    /*
+    2. Write a program to find minimum of three numbers:
+    */
+   int n1,n2,n3,MIN;
+   printf("\nEnter first number :");
+   scanf("%c",&n1);
+   printf("\nEnter second number :");
+   scanf("%c",&n2);
+   printf("\nEnter third number :");
+   scanf("%c",&n3);
+   if(n1>=n2 && n2>n3)
+       MIN = n3;
+   else if(n1>=n3 && n3>n2)
+       MIN = n2;
+   else if(n2>=n1 && n3>n1)
+       MIN = n1;
+   else
+       MIN = n1;
+   printf("\nMinimum among %d, %d, %d is : %d",n1,n2,n3,MIN); 
+}
+
+void Q3(){
+    /*
+    Write a program that will display the grade of a student provided his/her marks according to following criteria:
+    Marks > 80 then Grade = A
+    Marks between 61 & 80 then Grade = B
+    Marks between 51 & 60 then Grade = C
+    Marks between 41 & 50 then Grade = D
+    Marks between 35 & 40 then Grade = E
+    Marks < 35 then Grade = F
+    */
+   int m;
+   char grade;
+   printf("\nEnter marks of stundent :");
+   scanf("%d",&m);
+   if(m>80)
+    grade='A';
+   else if(m>60 && m<=80)
+    grade='B';
+   else if(m>50 && m<=60)
+    grade='C';
+   else if(m>40 && m<=50)
+    grade='D';  
+   else if(m>=35 && m<=40)
+    grade='E'; 
+   else if(m<35)
+    grade='F';
+   printf("\nGrade : %c",grade); 
+}
+
+void Q4(){
+    /*
+    Write a menu driven program
+    to design a calculator which can perform
+    basic operations like %, /, *, +, -.
+    */
+   int n1,n2,R,O;
+   printf("\nEnter first number :");
+   scanf("%d",&n1);
+   printf("\nEnter second number :");
+   scanf("%d",&n2);
+   printf("Press:\n1 for modulus\n2 for division\n3 for multiplication\n4 for addition\n5 for subtraction");
+   scanf("%d",&O);
+   switch (O)
+   {
+   case 1:
+       R=n1%n2;
+       break;
+   case 2:
+       R=n1/n2;
+       break;
+   case 3:
+       R=n1*n2;
+       break;
+   case 4:
+       R=n1+n2;
+       break; 
+   case 5:
+       R=n1-n2;
+       break;
+   }
+   printf("\nAddition of %d and %d gives : %d",n1,n2,R);
+}
+
+void Q5(){
+    /*
+    Write a program to print following patterns:
+                1
+              1 2 1
+            1 2 3 2 1
+          1 2 3 4 3 2 1
+        1 2 3 4 5 4 3 2 1
+    */
+   int n,i,j;
+   printf("\nEnter value of n: ");
+   scanf("%d",&n);
+   printf("\n");
+   for(i=1;i<=n;i++){
+        for(j=n-i;j>0;j--)
+            printf("  ");
+        for(j=1;j<=i;j++)
+            printf("%d ",j);
+        for(j=1;j<i;j++)
+            printf("%d ",j);
+        printf("\n");
+   }
+}
+
+void Q6(){
+    /*
+        Write a program which will take a number and print its
+        reverse along with number of digits present in that number.
+    */
+    int n,N=0,digit =0;
+    printf("\nEnter number : ");
+    scanf("%d",&n);
+    while(n!=0){
+       digit ++;
+        N=10*N+n%10;
+        n=n/10;
+    }
+    printf("\nReverse of number : %d",N);
+    printf("\nNumber of digits : %d",digit);
+}
+
+void Q7(){
+    /*
+        Wrtie a program which will
+        print fibonacci series upto limit n.
+    */
+   int Lim,n1=0,n2=1;
+   printf("\nEnter limit :");
+   scanf("%d",&Lim);
+   while(Lim>0){
+       int n3=0;
+       printf("%d ",n3);
+       n3=n1+n2;
+       n1=n2;
+       n2=n3;
+       Lim--;
+   }
+   printf("\n");
+}
+
+void Q8(){
+    int factor=0, n;
+    printf("Enter a number :");
+    scanf("%d",&n);
+    for(int i=2;i<=n;i++){
+        if(n%i==0)
+            factor++;
+    }
+    if(factor==1)
+        printf("YES");
+    else
+        printf("NO");
+}
+
+void Q9(){
+    /*
+    Write a program to add two 1D array of unequal size.
+    */
+   int n1,n2,n3,min,a1[n1],a2[n2],a3[n3];
+    if(n1>n2){
+        min=n2;
+        n3=n1;
+    }
+    else if(n2>n1){
+        min =n1;
+        n3=n2;
+    }
+    printf("\nEnter the limit of first array: ");
+    scanf("%d",&n1);
+    printf("\n");
+    for(int i=0;i<n1;i++)
+        a1[n1]=scanf("",&n1);
+    
+    printf("\nEnter the limit of second array: ");
+    scanf("%d",&n2);
+    printf("\n");
+    for(int i=0;i<n1;i++)
+        a2[n1]=scanf("%d",&n1);
+
+    for(int i=0;i<n3;i++){
+        if(i<min)
+            a3[i]=a1[i]+a2[i];
+        else{
+            if(min == n2)
+                a3[i]=a1[i];
+            else
+                a3[i]=a2[i];            
+        }
+    }
+    printf("\nFinal array :");
+    for(int i=0;i<n3;i++)
+        printf("%d ",a3[i]);
+}
+
+void Q10(){
+    /*
+    Write a program to input n elements in an array
+    and check whether an inputted number k exists in that array or not.
+    If yes than find frequency of number k in array.
+    */
+   int count=0,k,n,arr[n];
+   printf("Enter the limit of first array(n): ");
+   scanf("%d",&n);
+   for(int i=0;i<n;i++)
+        scanf("%d",&arr[n]);
+    printf("Enter the number (k): ");
+    scanf("%d",&k);
+    for(int i=0;i<n;i++){
+        if(arr[i]==k)
+            count++;
+    }
+    if(count!=0){
+        printf("YES number exist in the array.");
+        printf("Frequency of %d : %d",k,count);
+    }
+}
+
+void Q11(){
+    /*
+    Write a program to input elements into two matrices.
+    Perform matrix multiplication and
+    print the resultant matrix.
+    */
+   int i,j,m1,n1,n2,m2,arr[m1][n1],arr2[m2][n2],arr3[n1][m2];
+
+   printf("Enter the value for m1 and n1: ");
+   scanf("%d %d",&m1,&n1);
+   for(int i=0;i<m1;i++){
+       for(int j=0;j<n1;j++){
+           scanf("%d",&arr[i][j]);
+       }
+       printf("\n");
+   }
+
+   printf("Enter the value for m1 and n1: ");
+   scanf("%d %d",&m2,&n2);
+   for(i=0;i<m2;i++){
+       for(j=0;j<n2;j++){
+           scanf("%d",&arr2[i][j]);
+       }
+       printf("\n");
+   }
+   // Initializing all elements of result matrix to 0
+    for(i=0; i<n1; ++i)
+        for(j=0; j<m2; ++j)
+        {
+            arr3[i][j] = 0;
+        }
+
+
+    if(n1==m2){
+        for(i=0; i<m1; ++i)
+            for(j=0; j<n2; ++j)
+                for(int k=0; k<n1; ++k)
+                    arr3[i][j]+=arr[i][k]*arr2[k][j];
+    }
+
+    // Displaying the result
+    printf("\nResultant matrix:\n");
+    for(i=0; i<m1; ++i)
+        for(j=0; j<n2; ++j)
+        {
+            printf("%d  ", arr3[i][j]);
+            if(j == n2-1)
+                printf("\n\n");
+        }
+}
+
+int fact(int num){
+    int i,fact=1;
+    for(i=1;i<=num;i++)
+    {
+        fact*=i;
+    }
+    return fact;
+}
+void Q12(){
+    /*
+    Write a program to input values for n and r to calculate ncr
+    use function fact() to calculate factorial
+    */
+    int n,r,ncr;
+ 
+  	printf("\nEnter the vale for n and r:");
+  	scanf("%d%d",&n,&r);
+    ncr=fact(n)/(fact(r)*fact(n-r));
+    printf("%d",&ncr);
+}
+
+int sum_dig(int n){
+    int sum;
+    while(n!=0){
+        sum+=n%10;
+        n/=10;
+    }
+    return sum;
+}
+void Q13(){
+    /*
+    Write a program to input n elements in an array
+    and calculate sum of digit of all numbers
+    using function
+    */
+   int i,n,arr[n];
+   printf("Enter the limit of first array(n): ");
+   scanf("%d",&n);
+   for(i=0;i<n;i++){
+       scanf("%d ",&arr[i]);
+   }
+   for(i=0;i<n;i++){
+       printf("%d ",sum_dig(arr[i]));
+   }
+   printf("\n");
+}
+
+void Q14(){
+    /*
+    Write a program to input elements into square matrices
+    and print secondary diagonal elements.
+    */
+   int i,j,m1,n1,arr[m1][n1];
+   printf("Enter the value for m1 and n1: ");
+   scanf("%d%d",&m1,&n1);
+   while(m1==n1){
+        for(i=0;i<m1;i++){
+            for(j=0;j<n1;j++)
+                scanf("%d ",&arr[i]);
+        printf("\n");
+        }
+        for(i=0;i<m1;i++){
+            for(j=0;j<n1;j++)
+                if((i+j)==(n1-1))
+                    printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+   }
+}
+
+int R_square(int n){
+    int Result;
+    Result+=n*n;
+    if(n>0)
+        return R_square(n-1);
+    else
+        return Result;
+    
+}
+void Q15(){
+    /*
+    Write a program to calculate sum of following series
+    using recursive function.
+    1^2 + 2^2 + 3^2 + . . . . . . . n^2
+    */
+    int n;
+    printf("\nEnter the value for n : ");
+    scanf("%d",&n);
+    printf("\n%d ",R_square(n));
+}
