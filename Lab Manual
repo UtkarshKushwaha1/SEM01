@@ -1,8 +1,4 @@
 #include <stdio.h>
-int main(){
-    return 0;
-}
-
 void Q1() {
     /*
     1. Write a program to read an alphabet.
@@ -10,7 +6,7 @@ void Q1() {
     then convert it to lower case
     and vice versa.
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
     char c;
@@ -30,16 +26,16 @@ void Q2(){
     2. Write a program to find minimum of three numbers:
 
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
    int n1,n2,n3,MIN;
    printf("\nEnter first number :");
-   scanf("%c",&n1);
+   scanf("%d",&n1);
    printf("\nEnter second number :");
-   scanf("%c",&n2);
+   scanf("%d",&n2);
    printf("\nEnter third number :");
-   scanf("%c",&n3);
+   scanf("%d",&n3);
    if(n1>=n2 && n2>n3)
        MIN = n3;
    else if(n1>=n3 && n3>n2)
@@ -62,7 +58,7 @@ void Q3(){
     Marks < 35 then Grade = F
 
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
    int m;
@@ -91,7 +87,7 @@ void Q4(){
     basic operations like %, /, *, +, -.
 
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
    int n1,n2,R,O;
@@ -99,7 +95,7 @@ void Q4(){
    scanf("%d",&n1);
    printf("\nEnter second number :");
    scanf("%d",&n2);
-   printf("Press:\n1 for modulus\n2 for division\n3 for multiplication\n4 for addition\n5 for subtraction");
+   printf("Press:\n1 for modulus\n2 for division\n3 for multiplication\n4 for addition\n5 for subtraction\n");
    scanf("%d",&O);
    switch (O)
    {
@@ -132,7 +128,7 @@ void Q5(){
         1 2 3 4 5 4 3 2 1
 
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
    int n,i,j;
@@ -156,7 +152,7 @@ void Q6(){
         reverse along with number of digits present in that number.
 
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
     int n,N=0,digit =0;
@@ -177,18 +173,18 @@ void Q7(){
         print fibonacci series upto limit n.
 
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
-   int Lim,n1=0,n2=1;
+   int Lim,n1=-1,n2=0,n3=0;
    printf("\nEnter limit :");
    scanf("%d",&Lim);
    while(Lim>0){
-       int n3=0;
-       printf("%d ",n3);
+       printf("%d, ",n3);
        n3=n1+n2;
        n1=n2;
        n2=n3;
+       n3*=-1;
        Lim--;
    }
    printf("\n");
@@ -200,7 +196,7 @@ void Q8(){
     is prime or not..
 
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
     int factor=0, n;
@@ -221,30 +217,30 @@ void Q9(){
     Write a program to add two 1D array of unequal size.
     
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
-   int n1,n2,n3,min,a1[n1],a2[n2],a3[n3];
+    int n1,n2,n3,min;
+    printf("Enter the limit of first array: ");
+    scanf("%d",&n1);
+    int a1[n1];
+    for(int i=0;i<n1;i++)
+        scanf("%d",&a1[i]);
+    
+    printf("Enter the limit of second array: ");
+    scanf("%d",&n2);
+    int a2[n2];
+    for(int i=0;i<n2;i++)
+        scanf("%d",&a2[i]);
     if(n1>n2){
         min=n2;
         n3=n1;
     }
-    else if(n2>n1){
+    else{
         min =n1;
         n3=n2;
     }
-    printf("\nEnter the limit of first array: ");
-    scanf("%d",&n1);
-    printf("\n");
-    for(int i=0;i<n1;i++)
-        a1[n1]=scanf("",&n1);
-    
-    printf("\nEnter the limit of second array: ");
-    scanf("%d",&n2);
-    printf("\n");
-    for(int i=0;i<n1;i++)
-        a2[n1]=scanf("%d",&n1);
-
+    int a3[n3];
     for(int i=0;i<n3;i++){
         if(i<min)
             a3[i]=a1[i]+a2[i];
@@ -255,7 +251,7 @@ void Q9(){
                 a3[i]=a2[i];            
         }
     }
-    printf("\nFinal array :");
+    printf("\nFinal array : ");
     for(int i=0;i<n3;i++)
         printf("%d ",a3[i]);
 }
@@ -267,14 +263,14 @@ void Q10(){
     If yes than find frequency of number k in array.
     
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
-    int count=0,k,n,arr[n];
+   int count=0,k,n,arr[n];
     printf("Enter the limit of first array(n): ");
     scanf("%d",&n);
     for(int i=0;i<n;i++)
-        scanf("%d",&arr[n]);
+        scanf("%d",&arr[i]);
     printf("Enter the number (k): ");
     scanf("%d",&k);
     for(int i=0;i<n;i++){
@@ -283,7 +279,7 @@ void Q10(){
     }
     if(count!=0){
         printf("YES number exist in the array.");
-        printf("Frequency of %d : %d",k,count);
+        printf("\nFrequency of %d : %d",k,count);
     }
 }
 
@@ -294,35 +290,34 @@ void Q11(){
     print the resultant matrix.
     
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
-   int i,j,m1,n1,n2,m2,arr[m1][n1],arr2[m2][n2],arr3[n1][m2];
-
-   printf("Enter the value for m1 and n1: ");
-   scanf("%d %d",&m1,&n1);
-   for(int i=0;i<m1;i++){
-       for(int j=0;j<n1;j++){
+   int i,j,m1,n1,n2,m2;
+    printf("Enter the value for m1 and n1: ");
+    scanf("%d %d",&m1,&n1);
+    int arr[m1][n1];
+    for(i=0;i<m1;i++){
+       for(j=0;j<n1;j++){
            scanf("%d",&arr[i][j]);
        }
-       printf("\n");
-   }
+    }
 
-   printf("Enter the value for m1 and n1: ");
-   scanf("%d %d",&m2,&n2);
-   for(i=0;i<m2;i++){
-       for(j=0;j<n2;j++){
-           scanf("%d",&arr2[i][j]);
-       }
-       printf("\n");
-   }
-   // Initializing all elements of result matrix to 0
+    printf("Enter the value for m1 and n1: ");
+    scanf("%d %d",&m2,&n2);
+    int arr2[m2][n2];
+    for(i=0;i<m2;i++){
+        for(j=0;j<n2;j++){
+            scanf("%d",&arr2[i][j]);
+        }
+    }
+    int arr3[n1][m2];
+    // Initializing all elements of result matrix to 0
     for(i=0; i<n1; ++i)
         for(j=0; j<m2; ++j)
         {
             arr3[i][j] = 0;
         }
-
 
     if(n1==m2){
         for(i=0; i<m1; ++i)
@@ -338,7 +333,7 @@ void Q11(){
         {
             printf("%d  ", arr3[i][j]);
             if(j == n2-1)
-                printf("\n\n");
+                printf("\n");
         }
 }
 
@@ -356,24 +351,24 @@ void Q12(){
     use function fact() to calculate factorial
     
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
-    int n,r,ncr;
- 
+    int n,r;
+    float ncr;
   	printf("\nEnter the vale for n and r:");
   	scanf("%d%d",&n,&r);
-    ncr=fact(n)/(fact(r)*fact(n-r));
-    printf("%d",&ncr);
+    ncr=(float)fact(n)/(fact(r)*fact(n-r));
+    printf("%f",ncr);
 }
 
-int sum_dig(int n){
-    int sum;
-    while(n!=0){
-        sum+=n%10;
+void sum_dig(int n){
+    int sum=0;
+    while(n>0){
+        sum+=(n%10);
         n/=10;
     }
-    return sum;
+    printf("%d ",sum);
 }
 void Q13(){
     /*
@@ -382,19 +377,18 @@ void Q13(){
     using function
     
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
-   int i,n,arr[n];
-   printf("Enter the limit of first array(n): ");
-   scanf("%d",&n);
-   for(i=0;i<n;i++){
-       scanf("%d ",&arr[i]);
-   }
-   for(i=0;i<n;i++){
-       printf("%d ",sum_dig(arr[i]));
-   }
-   printf("\n");
+    int i,n;
+    printf("Enter the limit of first array(n): ");
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0;i<n;i++)
+        scanf("%d ",&arr[i]);
+    for(i=0;i<n;i++)
+        sum_dig(arr[i]);
+    printf("\n");
 }
 
 void Q14(){
@@ -403,34 +397,29 @@ void Q14(){
     and print secondary diagonal elements.
     
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
-   int i,j,m1,n1,arr[m1][n1];
-   printf("Enter the value for m1 and n1: ");
-   scanf("%d%d",&m1,&n1);
-   while(m1==n1){
-        for(i=0;i<m1;i++){
-            for(j=0;j<n1;j++)
-                scanf("%d ",&arr[i]);
-        printf("\n");
+    int n;
+    printf("Enter the value for n: ");
+    scanf("%d",&n);
+    int arr[n][n];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d ",&arr[i][j]);
         }
-        for(i=0;i<m1;i++){
-            for(j=0;j<n1;j++)
-                if((i+j)==(n1-1))
-                    printf("%d ",arr[i][j]);
-        }
-        printf("\n");
-   }
+    }
+    for(int i=0,j=n-1;i<n,j>=0;i++,j--)
+        printf("%d ",arr[i][j]);
+    printf("\n");
 }
 
 int R_square(int n){
-    int Result;
-    Result+=n*n;
-    if(n>0)
-        return R_square(n-1);
-    else
+    static int Result;
+    if(n==0)
         return Result;
+    Result+=n*n;
+    R_square(n-1);
     
 }
 void Q15(){
@@ -440,11 +429,30 @@ void Q15(){
     1^2 + 2^2 + 3^2 + . . . . . . . n^2
     
     NAME - PRAKHAR BHANDARI
-    SESCTION - J
+    SECTION - J
     ROLL NUMBER - 50
     */
     int n;
     printf("\nEnter the value for n : ");
     scanf("%d",&n);
     printf("\n%d ",R_square(n));
+}
+
+int main(){
+    Q1;
+    Q2;
+    Q3;
+    Q4;
+    Q5;
+    Q6;
+    Q7;
+    Q8;
+    Q9;
+    Q10;    
+    Q11;
+    Q12;
+    Q13;
+    Q14;
+    Q15;
+    return 0;
 }
