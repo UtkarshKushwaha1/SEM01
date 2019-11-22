@@ -1,20 +1,5 @@
 #include <stdio.h>
 int main(){
-    Q1();
-    Q2();
-    Q3();
-    Q4();
-    Q5();
-    Q6();
-    Q7();
-    Q8();
-    Q9();
-    Q10();
-    Q11();
-    Q12();
-    Q13();
-    Q14();
-    Q15();
     return 0;
 }
 
@@ -24,6 +9,9 @@ void Q1() {
     If it is in capital case
     then convert it to lower case
     and vice versa.
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
     char c;
     printf("\nENter an alphabet : ");
@@ -40,6 +28,10 @@ void Q1() {
 void Q2(){
     /*
     2. Write a program to find minimum of three numbers:
+
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
    int n1,n2,n3,MIN;
    printf("\nEnter first number :");
@@ -68,6 +60,10 @@ void Q3(){
     Marks between 41 & 50 then Grade = D
     Marks between 35 & 40 then Grade = E
     Marks < 35 then Grade = F
+
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
    int m;
    char grade;
@@ -93,6 +89,10 @@ void Q4(){
     Write a menu driven program
     to design a calculator which can perform
     basic operations like %, /, *, +, -.
+
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
    int n1,n2,R,O;
    printf("\nEnter first number :");
@@ -130,6 +130,10 @@ void Q5(){
             1 2 3 2 1
           1 2 3 4 3 2 1
         1 2 3 4 5 4 3 2 1
+
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
    int n,i,j;
    printf("\nEnter value of n: ");
@@ -150,6 +154,10 @@ void Q6(){
     /*
         Write a program which will take a number and print its
         reverse along with number of digits present in that number.
+
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
     int n,N=0,digit =0;
     printf("\nEnter number : ");
@@ -167,6 +175,10 @@ void Q7(){
     /*
         Wrtie a program which will
         print fibonacci series upto limit n.
+
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
    int Lim,n1=0,n2=1;
    printf("\nEnter limit :");
@@ -183,6 +195,14 @@ void Q7(){
 }
 
 void Q8(){
+    /*
+    Write a program to check whether a number
+    is prime or not..
+
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
+    */
     int factor=0, n;
     printf("Enter a number :");
     scanf("%d",&n);
@@ -199,6 +219,10 @@ void Q8(){
 void Q9(){
     /*
     Write a program to add two 1D array of unequal size.
+    
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
    int n1,n2,n3,min,a1[n1],a2[n2],a3[n3];
     if(n1>n2){
@@ -241,11 +265,15 @@ void Q10(){
     Write a program to input n elements in an array
     and check whether an inputted number k exists in that array or not.
     If yes than find frequency of number k in array.
+    
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
-   int count=0,k,n,arr[n];
-   printf("Enter the limit of first array(n): ");
-   scanf("%d",&n);
-   for(int i=0;i<n;i++)
+    int count=0,k,n,arr[n];
+    printf("Enter the limit of first array(n): ");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
         scanf("%d",&arr[n]);
     printf("Enter the number (k): ");
     scanf("%d",&k);
@@ -264,6 +292,10 @@ void Q11(){
     Write a program to input elements into two matrices.
     Perform matrix multiplication and
     print the resultant matrix.
+    
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
    int i,j,m1,n1,n2,m2,arr[m1][n1],arr2[m2][n2],arr3[n1][m2];
 
@@ -322,6 +354,10 @@ void Q12(){
     /*
     Write a program to input values for n and r to calculate ncr
     use function fact() to calculate factorial
+    
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
     int n,r,ncr;
  
@@ -344,6 +380,10 @@ void Q13(){
     Write a program to input n elements in an array
     and calculate sum of digit of all numbers
     using function
+    
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
    int i,n,arr[n];
    printf("Enter the limit of first array(n): ");
@@ -361,6 +401,10 @@ void Q14(){
     /*
     Write a program to input elements into square matrices
     and print secondary diagonal elements.
+    
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
    int i,j,m1,n1,arr[m1][n1];
    printf("Enter the value for m1 and n1: ");
@@ -394,6 +438,10 @@ void Q15(){
     Write a program to calculate sum of following series
     using recursive function.
     1^2 + 2^2 + 3^2 + . . . . . . . n^2
+    
+    NAME - PRAKHAR BHANDARI
+    SESCTION - J
+    ROLL NUMBER - 50
     */
     int n;
     printf("\nEnter the value for n : ");
